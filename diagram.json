@@ -2,38 +2,7 @@
   "version": 1,
   "author": "Aicha Bouaziz",
   "editor": "wokwi",
-  "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -14.36, "attrs": {} },
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": -80.4,
-      "left": 243.8,
-      "attrs": { "color": "red" }
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r1",
-      "top": 51.95,
-      "left": 153.6,
-      "attrs": { "value": "1000" }
-    },
-    {
-      "type": "wokwi-pushbutton",
-      "id": "btn1",
-      "top": 121.4,
-      "left": 172.8,
-      "attrs": { "color": "green", "xray": "1" }
-    }
-  ],
-  "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "r1:1", "esp:23", "green", [ "v0" ] ],
-    [ "esp:GND.3", "btn1:1.l", "black", [ "h0" ] ],
-    [ "btn1:2.l", "esp:16", "green", [ "h0" ] ],
-    [ "led1:A", "r1:2", "green", [ "v0" ] ],
-    [ "esp:GND.2", "led1:C", "black", [ "v0" ] ]
-  ],
+  "parts": [ { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -14.36, "attrs": {} } ],
+  "connections": [ [ "esp:TX", "$serialMonitor:RX", "", [] ], [ "esp:RX", "$serialMonitor:TX", "", [] ] ],
   "dependencies": {}
 }
